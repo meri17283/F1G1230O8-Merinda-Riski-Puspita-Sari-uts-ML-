@@ -45,7 +45,7 @@ le = LabelEncoder()
 for col in cat_cols:
     df[col] = le.fit_transform(df[col])
 
-# Hapus outlier (IQR)
+# outlier (IQR)
 Q1 = df['yield'].quantile(0.25)
 Q3 = df['yield'].quantile(0.75)
 IQR = Q3 - Q1

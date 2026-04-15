@@ -107,10 +107,10 @@ for split_name, test_size in splits.items():
 
     # Random Forest GridSearch
     rf_params = {
-    'n_estimators': [100],
-    'max_depth': [9],
-    'min_samples_split': [5],
-    'min_samples_leaf': [2]
+    'n_estimators': [100, 200],
+    'max_depth': [5, 10, None],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4]
     }
 
     rf_grid = GridSearchCV(RandomForestRegressor(random_state=42),
